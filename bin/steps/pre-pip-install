@@ -3,7 +3,7 @@
 
 puts-step "Installing pre-requirements with pip (OpenEE custom)"
 
-# export CFLAGS="-fno-PIE -fPIC --std=c++11 -no-pie --static" 
+export CFLAGS="-fPIC" 
 # export LDFLAGS="-fno-PIE -fPIC --std=c++11 -no-pie"
 
 set +e
