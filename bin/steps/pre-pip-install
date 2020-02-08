@@ -3,8 +3,8 @@
 
 puts-step "Installing pre-requirements with pip (OpenEE custom)"
 
-export CFLAGS="-fPIC" 
-# export LDFLAGS="-fno-PIE -fPIC --std=c++11 -no-pie"
+export CFLAGS="-fno-PIE -fPIC" 
+export LDFLAGS="-fno-PIE -fPIC"
 
 set +e
 /app/.heroku/python/bin/pip install -r $BUILD_DIR/pre-requirements.txt --exists-action=w --src=/app/.heroku/src --disable-pip-version-check --no-cache-dir 2>&1 | tee $WARNINGS_LOG | cleanup | indent
